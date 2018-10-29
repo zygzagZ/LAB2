@@ -3,6 +3,8 @@
 #ifdef __cplusplus
 namespace jnp1 {
 #endif
+	
+std::ios_base::Init mInitializer;
 unsigned long strset42() {
 	static unsigned long constId = strset_new();
 	static bool inserted = false;
