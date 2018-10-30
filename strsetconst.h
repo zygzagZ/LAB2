@@ -3,15 +3,15 @@
 
 #ifdef __cplusplus
 namespace jnp1 {
-  extern "C" {
+    extern "C" {
 #endif
-    /*Zwraca identyfikator zbioru, którego nie można modyfikować i który zawiera
-    jeden element: napis "42". Zbiór jest tworzony przy pierwszym wywołaniu tej
-    funkcji i wtedy zostaje ustalony jego numer.*/
-    unsigned long strset42();
+        /*Zwraca identyfikator zbioru, którego nie można modyfikować i który zawiera
+        jeden element: napis "42". Zbiór jest tworzony przy pierwszym wywołaniu tej
+        funkcji i wtedy zostaje ustalony jego numer.*/
+        unsigned long strset42();
 
 #ifdef __cplusplus
-  }
+    }
 }
 #endif
 
