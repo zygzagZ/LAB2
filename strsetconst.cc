@@ -1,19 +1,32 @@
 #include "strset.h"
 #include "strsetconst.h"
-#ifdef __cplusplus
+
+namespace{
+  #ifndef DNDEBUG
+    const bool debug = true;
+  #else
+    const bool debug = false;
+  #endif
+  
+  unsigned long init_strset42(){
+    if(debug){
+      std::cerr << "strsetconst init invoked" << std::endl;
+    }
+    
+    return jnp1::strset_new();
+  }
+}
+
 namespace jnp1 {
-#endif
-	
-std::ios_base::Init mInitializer;
-unsigned long strset42() {
-	static unsigned long constId = strset_new();
-	static bool inserted = false;
-	if (!inserted) {
-		inserted = true;
-		strset_insert(constId, "42");
-	}
-	return constId;
+  
+  unsigned long strset42() {
+    static unsigned long constId = init_strset42();
+    static bool inserted = false;
+    if (!inserted) {
+      inserted = true;
+      strset_insert(constId, "42");
+    }
+    return constId;
+  }
+  
 }
-#ifdef __cplusplus
-}
-#endif

@@ -1,23 +1,17 @@
 #ifndef __STRSET_H__
 #define __STRSET_H__
+
 #ifdef __cplusplus
-#include <cstring>
-#include <set>
-#include <unordered_map>
-struct set_comp {
-    bool operator() (const char *a, const char *b) const {
-        return strcmp(a, b) < 0;
-    }
-};
-using strset_set = std::set<const char*, set_comp>;
-using strset_map = std::unordered_map<unsigned long, strset_set>;
-#include <cstddef>
-#include <iostream>
-namespace jnp1 {
-extern "C" {
+  #include <cstddef>
+  #ifndef DNDEBUG
+    #include <iostream>
+  #endif
+  namespace jnp1 {
+  extern "C" {
 #else
-#include <stddef.h>
+  #include <stddef.h>
 #endif
+
     unsigned long strset_new();
 
           /*Tworzy nowy zbiór i zwraca jego identyfikator.*/
