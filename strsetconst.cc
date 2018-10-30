@@ -14,7 +14,7 @@ namespace {
         }
         
         auto id = jnp1::strset_new();
-        strset_insert(id, "42");
+        jnp1::strset_insert(id, "42");
         return id;
     }
 }

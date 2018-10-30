@@ -2,6 +2,7 @@
 #define __STRSETCONST_H__
 
 #ifdef __cplusplus
+#include <iostream>
 namespace jnp1 {
     extern "C" {
 #endif

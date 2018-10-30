@@ -12,11 +12,12 @@ namespace {
         const bool debug = false;
     #endif
     
-    using strset_map = std::unordered_map<unsigned long, std::set<std::string>>;
+    using strset_set = std::set<std::string>;
+    using strset_map = std::unordered_map<unsigned long, strset_set>;
     
     strset_map& zbior() {
-        static strset_map* zbior = new strset_map();
-        return *zbior;
+        static strset_map zbior;
+        return zbior;
     }
     
     unsigned long lastId = 0;
