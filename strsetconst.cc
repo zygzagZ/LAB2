@@ -2,7 +2,7 @@
 #include "strsetconst.h"
 
 namespace{
-  #ifndef DNDEBUG
+  #ifndef NDEBUG
     const bool debug = true;
   #else
     const bool debug = false;

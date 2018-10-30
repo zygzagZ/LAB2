@@ -3,9 +3,7 @@
 
 #ifdef __cplusplus
   #include <cstddef>
-  #ifndef DNDEBUG
-    #include <iostream>
-  #endif
+  #include <iostream>
   namespace jnp1 {
   extern "C" {
 #else
